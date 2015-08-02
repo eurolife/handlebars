@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="handlebars-1.0.rc.1.min.js"></script>
+<script src="main.js"></script>
+
+<body>
+
+The List of Shoes:
+<ul class="shoesNav"></ul>
+
+<script id="shoe-template" type="x-handlebars-template">
+{{#each allShoes}}
+	<li class="shoes">
+		<span class="shoe-name"> {{name}} - </span> price: {{price}}
+		{{> description}}
+	</li>
+{{/each}}
+
+</script>
+
+<script id="shoe-description" type="x-handlebars-template">
+	<ul>
+		<li>{{color}}</li>
+		<li>{{size}}</li>
+	</ul>
+</script>
+
+</body>
+</html>
