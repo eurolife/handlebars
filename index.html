@@ -26,5 +26,14 @@ The List of Shoes:
 	</ul>
 </script>
 
+<ul class="main-nav">
+</ul>
+<script id="navigation" type="x-handlebars-template">
+	{{#each nav}}
+		<li><a href="{{link}}">{{capitalize name}}</a></li>
+	{{/each}}
+	{{#uppercase}}blah{{/uppercase}}
+</script>
+
 </body>
 </html>
